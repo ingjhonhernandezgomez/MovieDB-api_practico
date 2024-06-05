@@ -16,6 +16,14 @@
   <header id="header" class="header-container">
     <span class="header-arrow inactive">&lt;</span>
     <h1 class="header-title">Movies inge Jhon</h1>
+    
+    <select name="language" id="la" style="margin-bottom: 15px;">            
+      <option value="en">English</option>
+      <option value="es">Spanish</option>
+      <option value="pt-BR">Portuguese Br</option>
+      <option value="fr">French</option>
+    </select>
+
     <h1 class="header-title header-title--categoryView inactive">Acción</h1>
 
     <form id="searchForm" class="header-searchForm">
@@ -26,64 +34,48 @@
 
   <section id="trendingPreview" class="trendingPreview-container">
     <div class="trendingPreview-header">
-      <h2 class="trendingPreview-title">Tendencias</h2>
-      <button class="trendingPreview-btn">Ver más</button>
+      <h2 class="trendingPreview-title">Tendency</h2>
+      <button class="trendingPreview-btn">See more</button>
     </div>
 
     <article class="trendingPreview-movieList">
-    
+      <div class="movie-container movie-container--loading"></div>
+      <div class="movie-container movie-container--loading"></div>
+      <div class="movie-container movie-container--loading"></div>
       <!-- <div class="movie-container">
         <img
-          src="https://image.tmdb.org/t/p/w300/adOzdWS35KAo21r9R4BuFCkLer6.jpg"
+          src=""
           class="movie-img"
           alt="Nombre de la película"
         />
       </div> -->
-
     </article>
   </section>
 
   <section id="categoriesPreview" class="categoriesPreview-container">
-    <h2 class="categoriesPreview-title">Categorías</h2>
+    <h2 class="categoriesPreview-title">Categories</h2>
 
     <article class="categoriesPreview-list">
-      <div class="category-container">
-        <h3 id="id28" class="category-title">Romance</h3>
+      
+      <div class="category-container category-container--loading"></div>
+      <div class="category-container category-container--loading"></div>
+      <div class="category-container category-container--loading">
+        <!-- <h3 id="id16" class="category-title">Drama</h3> -->
       </div>
 
-      <div class="category-container">
-        <h3 id="id16" class="category-title">Drama</h3>
-      </div>
-
-      <div class="category-container">
-        <h3 id="id14" class="category-title">Acción</h3>
-      </div>
     </article>
   </section>
 
   <section id="genericList" class="genericList-container inactive">
-    <div class="movie-container">
-      <img
+    
+    <div class="movie-container movie-container--loading"></div>
+    <div class="movie-container movie-container--loading"></div>
+    <div class="movie-container movie-container--loading">
+      <!-- <img
         src="https://image.tmdb.org/t/p/w300/adOzdWS35KAo21r9R4BuFCkLer6.jpg"
         class="movie-img"
         alt="Nombre de la película"
-      />
-    </div>
-
-    <div class="movie-container">
-      <img
-        src="https://image.tmdb.org/t/p/w300/adOzdWS35KAo21r9R4BuFCkLer6.jpg"
-        class="movie-img"
-        alt="Nombre de la película"
-      />
-    </div>
-
-    <div class="movie-container">
-      <img
-        src="https://image.tmdb.org/t/p/w300/adOzdWS35KAo21r9R4BuFCkLer6.jpg"
-        class="movie-img"
-        alt="Nombre de la película"
-      />
+      /> -->
     </div>
   </section>
 
@@ -92,28 +84,58 @@
     <span class="movieDetail-score">7.6</span>
     <p class="movieDetail-description">
       Wisecracking mercenary Deadpool battles the evil and powerful Cable and other bad guys to save a boy's life.
-    </p>
+    </p> 
 
     <article class="categories-list">
-      <div class="category-container">
-        <h3 id="id28" class="category-title">Romance</h3>
+
+      <div class="category-container category-container--loading"></div>
+      <div class="category-container category-container--loading"></div>
+      <div class="category-container category-container--loading">
+        <!-- <h3 id="id14" class="category-title">Acción</h3> -->
       </div>
 
-      <div class="category-container">
-        <h3 id="id16" class="category-title">Drama</h3>
-      </div>
-
-      <div class="category-container">
-        <h3 id="id14" class="category-title">Acción</h3>
-      </div>
     </article>
 
     <article class="relatedMovies-container">
-      <h2 class="relatedMovies-title">Películas similares</h2>
+      <h2 class="relatedMovies-title">Similar Movies</h2>
 
       <div class="relatedMovies-scrollContainer">
+        <div class="movie-container movie-container--loading"></div>
+        <div class="movie-container movie-container--loading"></div>
+        <div class="movie-container movie-container--loading"></div>
       </div>
     </article>
+  </section>
+
+  <section id="liked" class="liked-container">
+    <div class="liked-header">
+      <h2 class="liked-title">Favorite movies</h2>
+    </div>
+    
+    <article class="liked-moviesList">
+      <div class="movie-container">
+        <img
+          src="https://image.tmdb.org/t/p/w300/adOzdWS35KAo21r9R4BuFCkLer6.jpg"
+          class="movie-img"
+          alt="Nombre de la película"
+        />
+      </div>
+      <div class="movie-container">
+        <img
+          src="https://image.tmdb.org/t/p/w300/adOzdWS35KAo21r9R4BuFCkLer6.jpg"
+          class="movie-img"
+          alt="Nombre de la película"
+        />
+      </div>
+      <div class="movie-container">
+        <img
+          src="https://image.tmdb.org/t/p/w300/adOzdWS35KAo21r9R4BuFCkLer6.jpg"
+          class="movie-img"
+          alt="Nombre de la película"
+        />
+      </div>
+    </article>
+
   </section>
 
   <footer>Hecho por el inge @JhonGomez</footer>

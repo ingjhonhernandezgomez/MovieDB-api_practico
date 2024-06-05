@@ -89,20 +89,63 @@ button {
 
 
 /* Shared */
-.header-container, .trendingPreview-header, .categoriesPreview-container {
+.header-container, .trendingPreview-header, .categoriesPreview-container, .liked-header {
   padding: 0 24px;
 }
 
-.trendingPreview-container, .categoriesPreview-container, footer {
+.trendingPreview-container, .categoriesPreview-container,.liked-container, footer {
   margin-top: 48px;
 }
 
-.trendingPreview-header, .categoriesPreview-title {
+.trendingPreview-header, .categoriesPreview-title, .liked-header {
   margin-bottom: 24px;
 }
 
 .movie-container {
   cursor: pointer;
+  position: relative;
+}
+
+.movie-container--loading {
+  background: var(--purple-light-2);
+  border-radius: 8px;
+  height: 225px;
+  min-height: 225px;
+  max-height: 225px;
+  width: 150px;
+  min-width: 150px;
+  max-width: 150px;
+  margin-bottom: 15px;
+  animation: loading-skeleton infinite 1.5s;
+}
+.movie-container--loading:nth-child(2) {
+  animation-delay: .2s;
+}
+.movie-container--loading:nth-child(3) {
+  animation-delay: .4s;
+}
+
+.movie-btn{
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  height: 30px;
+  width: 30px;
+  border-radius: 30px;
+  padding: 0;
+  margin: 0;
+}
+
+.movie-btn::before{
+  content: '🤍';
+}
+
+.movie-btn--liked{
+  background-color: var(--purple-light-2);
+}
+
+.movie-btn--liked::before{
+  content: '💜';
 }
 
 .movie-img {
@@ -117,6 +160,22 @@ button {
   flex-wrap: wrap;
 }
 
+.category-container--loading {
+  background: var(--purple-light-2);
+  border-radius: 8px;
+  height: 25px;
+  min-height: 25px;
+  max-height: 25px;
+  width: 150px;
+  min-width: 150px;
+  max-width: 150px;
+  margin-bottom: 15px;
+  animation: loading-skeleton infinite 1.5s;
+}
+.category-container--loading:nth-child(2) {
+  animation-delay: .2s;
+}
+
 
 /* Header */
 .header-container {
@@ -128,7 +187,7 @@ button {
   /*background: linear-gradient(180deg, rgba(0, 0, 0, 0.35) 19.27%, rgba(0, 0, 0, 0) 29.17%), url(https://pics.filmaffinity.com/Deadpool-777527803-large.jpg);*/
   background-size: cover !important;
   height: 480px;
-  position: fixed;
+  position: fixed;  
   top: 0;
   width: 100%;
 }
@@ -175,7 +234,7 @@ button {
 
 
 /* Trending */
-.trendingPreview-header {
+.trendingPreview-header, .liked-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -187,7 +246,7 @@ button {
   width: 72px;
 }
 
-.trendingPreview-movieList {
+.trendingPreview-movieList, .liked-moviesList {
   overflow-x: scroll;
   overflow-y: hidden;
   white-space: nowrap;
@@ -196,12 +255,14 @@ button {
   padding-bottom: 16px;
 }
 
-.trendingPreview-movieList .movie-container {
+.trendingPreview-movieList .movie-container,
+.liked-moviesList .movie-container{
   display: inline-block;
   margin-right: 8px;
 }
 
-.trendingPreview-movieList .movie-container .movie-img {
+.trendingPreview-movieList .movie-container .movie-img,
+.liked-moviesList .movie-container .movie-img {
   height: 225px;
   min-height: 225px;
   max-height: 225px;
@@ -271,6 +332,7 @@ button {
 
 .genericList-container .movie-img {
   width: 100%;
+  min-height: 200px;
 }
 
 
@@ -331,6 +393,15 @@ button {
   margin-right: 8px;
 }
 
+.relatedMovies-scrollContainer .movie-container--loading {
+  width: 125px;
+  min-width: 125px;
+  max-width: 125px;
+  height: 187.5px;
+  min-height: 187.5px;
+  max-height: 187.5px;
+}
+
 .relatedMovies-scrollContainer .movie-img {
   width: 125px;
   min-width: 125px;
@@ -356,4 +427,14 @@ footer {
 /* Navigation */
 .inactive {
   display: none;
+}
+
+/* Animations */
+@keyframes loading-skeleton {
+  0%, 100% {
+    opacity: 100%;
+  }
+  50% {
+    opacity: 0%;
+  }
 }
